@@ -19,6 +19,9 @@ const Testimony = () => {
       name: "Mas Yusuf",
       text: "Bisa ganti SSD oke",
     },
+  ];
+
+  const datas2 = [
     {
       name: "Henri Gaming 69",
       text: "Makasih techfix joki web 20rb anjay",
@@ -52,7 +55,7 @@ const Testimony = () => {
         ))}
       </Marquee>
       <Marquee className="mt-5" direction="right">
-        {datas.map((data) => (
+        {datas2.map((data) => (
           <div className="bg-slate-50 rounded-lg border border-slate-200 py-4 px-5 mx-2">
             <h1 className="text-blue-500 font-semibold">{data.name}</h1>
             <p>{data.text}</p>

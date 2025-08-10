@@ -19,7 +19,7 @@ const Founder = () => {
     },
   ];
   return (
-    <div className="mx-auto max-w-[1240px] flex min-h-[100vh] px-4 flex-col items-start">
+    <div className="mx-auto max-w-[1240px] flex px-4 py-28 flex-col items-start">
       <h1 className="text-5xl text-blue-500 font-bold">Meet Our Founder</h1>
       <p className="mt-3 text-slate-600 text-xl">
         Bertemu dengan para founder TechFix yang berpengalaman di bidang
