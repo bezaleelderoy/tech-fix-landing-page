@@ -1,4 +1,3 @@
-import React from "react";
 import Marquee from "react-fast-marquee";
 
 const Testimony = () => {
@@ -16,26 +15,26 @@ const Testimony = () => {
       text: "Lumayanlah terimakasih TechFix",
     },
     {
-      name: "Mas Yusuf",
+      name: "Yusuf",
       text: "Bisa ganti SSD oke",
     },
   ];
 
   const datas2 = [
     {
-      name: "Henri Gaming 69",
+      name: "Radicka Yogisara",
       text: "Makasih techfix joki web 20rb anjay",
     },
     {
-      name: "Fernando Simatupang",
+      name: "Adrian",
       text: "Servis mura mantap pula",
     },
     {
-      name: "Bapak Bengkel",
+      name: "Imran",
       text: "Terimakasih bisa unlock google account",
     },
     {
-      name: "Seva Santepi",
+      name: "Seva Winata",
       text: "Makasih TechFix joki web gacor",
     },
   ];
