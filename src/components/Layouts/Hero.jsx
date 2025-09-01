@@ -1,9 +1,21 @@
-import React from "react";
+import AOS from "aos";
+import { useEffect } from "react";
+import "aos/dist/aos.css";
 
 const Hero = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
-    <div className="mx-auto max-w-[1240px] flex max-md:flex-col items-center px-4 max-md:mt-[80px]">
-      <div className="w-[80%]">
+    <div
+      id="home"
+      className="mx-auto max-w-[1240px] flex max-md:flex-col items-center px-4 max-md:mt-[80px]"
+    >
+      <div data-aos="fade-up" className="w-[80%]">
         <h1 className="xl:text-5xl text-4xl font-bold text-slate-600 pb-3 md:mt-0 mt-10">
           Perbaiki Gadget Anda
         </h1>
@@ -27,6 +39,7 @@ const Hero = () => {
       </div>
       <div>
         <img
+          data-aos="fade-up"
           src="./hero.webp"
           alt="Hero image"
           loading="lazy"

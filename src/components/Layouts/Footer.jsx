@@ -44,13 +44,17 @@ const Footer = () => {
         <div className="flex items-center justify-between my-4 text-slate-400 font-light">
           <h1>© 2025 TechFix. All Rights Reserved.</h1>
           <div className="flex text-3xl">
-            <a href="https://www.instagram.com/techfixdps/">
+            <a href="https://www.instagram.com/techfixdps/" target="_blank">
               <FaInstagram />
             </a>
-            <a href="https://web.facebook.com/techfix.bali" className="px-3">
+            <a
+              href="https://web.facebook.com/techfix.bali"
+              className="px-3"
+              target="_blank"
+            >
               <FaFacebook />
             </a>
-            <a href="https://www.youtube.com/@BangHenri09">
+            <a href="https://www.youtube.com/@BangHenri09" target="_blank">
               <FaYoutube />
             </a>
           </div>

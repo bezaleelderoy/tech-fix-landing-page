@@ -1,6 +1,16 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Marquee from "react-fast-marquee";
 
 const Testimony = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: false,
+    });
+  }, []);
+
   const datas = [
     {
       name: "Deva Pratama",
@@ -38,24 +48,47 @@ const Testimony = () => {
       text: "Makasih TechFix joki web gacor",
     },
   ];
+
   return (
     <div className="mx-auto max-w-[1240px] flex px-4 flex-col items-start overflow-hidden">
-      <h1 className="text-5xl text-blue-500 font-bold mt-24">Testimonial</h1>
-      <p className="mt-3 text-slate-600 text-xl">
+      <h1 className="text-5xl text-blue-500 font-bold mt-24" data-aos="fade-up">
+        Testimonial
+      </h1>
+      <p
+        className="mt-3 text-slate-600 text-xl"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
         Kami percaya TechFix memberikan kepuasan pelanggan terbaik 100%.
       </p>
-      <div className="w-[120px] bg-blue-500 h-1.5 rounded-lg mt-4"></div>
+      <div
+        className="w-[120px] bg-blue-500 h-1.5 rounded-lg mt-4"
+        data-aos="zoom-in"
+        data-aos-delay="400"
+      ></div>
+
       <Marquee className="mt-10">
-        {datas.map((data) => (
-          <div className="bg-slate-50 rounded-lg border border-slate-200 py-4 px-5 mx-2">
+        {datas.map((data, i) => (
+          <div
+            key={i}
+            className="bg-slate-50 rounded-lg border border-slate-200 py-4 px-5 mx-2"
+            data-aos="fade-up"
+            data-aos-delay={i * 150}
+          >
             <h1 className="text-blue-500 font-semibold">{data.name}</h1>
             <p>{data.text}</p>
           </div>
         ))}
       </Marquee>
+
       <Marquee className="mt-5" direction="right">
-        {datas2.map((data) => (
-          <div className="bg-slate-50 rounded-lg border border-slate-200 py-4 px-5 mx-2">
+        {datas2.map((data, i) => (
+          <div
+            key={i}
+            className="bg-slate-50 rounded-lg border border-slate-200 py-4 px-5 mx-2"
+            data-aos="fade-up"
+            data-aos-delay={i * 150}
+          >
             <h1 className="text-blue-500 font-semibold">{data.name}</h1>
             <p>{data.text}</p>
           </div>

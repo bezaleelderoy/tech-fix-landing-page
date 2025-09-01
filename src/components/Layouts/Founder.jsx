@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Founder = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: false,
+    });
+  }, []);
+
   const items = [
     {
       name: "Mamat Seroja",
@@ -18,19 +27,33 @@ const Founder = () => {
       image: "./henri.webp",
     },
   ];
+
   return (
     <div className="mx-auto max-w-[1240px] flex px-4 py-28 flex-col items-start">
-      <h1 className="text-5xl text-blue-500 font-bold">Meet Our Founder</h1>
-      <p className="mt-3 text-slate-600 text-xl">
+      <h1 className="text-5xl text-blue-500 font-bold" data-aos="fade-up">
+        Meet Our Founder
+      </h1>
+      <p
+        className="mt-3 text-slate-600 text-xl"
+        data-aos="fade-up"
+        data-aos-delay="150"
+      >
         Bertemu dengan para founder TechFix yang berpengalaman di bidang
         teknologi dan memiliki passion dalam dunia IT.
       </p>
-      <div className="w-[120px] bg-blue-500 h-1.5 rounded-lg mt-4"></div>
+      <div
+        className="w-[120px] bg-blue-500 h-1.5 rounded-lg mt-4"
+        data-aos="zoom-in"
+        data-aos-delay="300"
+      ></div>
+
       <div className="mt-8 flex max-md:flex-col justify-between items-center w-full">
-        {items.map((item, key) => (
+        {items.map((item, index) => (
           <div
-            key={key}
+            key={index}
             className="border border-slate-300 rounded-lg px-4 py-4 md:first:mr-7 md:last:ml-7 max-md:first:mb-4 max-md:last:mt-4"
+            data-aos="fade-up"
+            data-aos-delay={index * 200 + 400} // biar muncul bergantian
           >
             <h1 className="text-blue-500 text-xl font-semibold">{item.name}</h1>
             <p className="font-medium py-2">{item.position}</p>

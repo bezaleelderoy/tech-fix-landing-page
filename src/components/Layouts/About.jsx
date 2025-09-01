@@ -1,66 +1,61 @@
-import { BsFillLightningChargeFill } from "react-icons/bs";
-import { FaHandPaper } from "react-icons/fa";
-import { FaMoneyBillTransfer } from "react-icons/fa6";
+import AOS from "aos";
+import { useEffect } from "react";
+import "aos/dist/aos.css";
 
 const About = () => {
-  const items = [
-    {
-      icon: <BsFillLightningChargeFill />,
-      text: "Perbaikan Cepat",
-      sub: "Kalok Mamat yang servis.. behhh setengah jam udah jadi.",
-    },
-    {
-      icon: <FaHandPaper />,
-      text: "Garansi 90 Hari",
-      sub: "Barang yang dibeli barang bagus jadinya aman sampai 90 hari!.",
-    },
-    {
-      icon: <FaMoneyBillTransfer />,
-      text: "Harga Transparan",
-      sub: "Techfix cuma ngambil untung 50rb",
-    },
-  ];
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
-    <div className="mx-auto max-w-[1240px] flex px-4 flex-col items-start pb-28">
+    <div
+      id="about"
+      className="mx-auto max-w-[1240px] flex px-4 flex-col overflow-hidden pb-8"
+    >
+      <h1 data-aos="fade-up" className="text-5xl text-blue-500 font-bold mt-24">
+        Tentang Kami
+      </h1>
+      <p data-aos="fade-up" className="mt-3 text-slate-600 text-xl">
+        Kami percaya TechFix memberikan kepuasan pelanggan terbaik 100%.
+      </p>
       <div
-        className="bg-blue-500 bg-cover bg-center rounded-2xl w-full pb-12"
-        style={{ backgroundImage: "url('./bg-reason.png')" }}
-      >
-        <h1 className="text-center pt-12 text-white font-bold text-4xl">
-          Kenapa Harus Servis di TechFix?
-        </h1>
-        <p className="text-center pt-5 text-slate-200 ">
-          Temukan layanan terbaik dengan teknisi berpengalaman dan penggunaan
-          suku cadang yang berkualitas
-        </p>
-        <div className="flex max-md:flex-col  items-center justify-center">
-          <div>
-            {items.map((item, index) => (
-              <div
-                key={index}
-                className={`flex items-center max-md:justify-center text-white py-7 my-2 ${
-                  index !== items.length - 1
-                    ? "border-b border-b-slate-300"
-                    : ""
-                } `}
-              >
-                <div className="text-lg border-2 border-white rounded-[50%] px-4 py-4">
-                  {item.icon}
-                </div>
-                <div className="ml-5 w-1/2">
-                  <h1 className="text-lg font-medium">{item.text}</h1>
-                  <p className="text-xs text-slate-200">{item.sub}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="md:ml-10  md:w-2/5 w-2/3">
-            <img
-              loading="lazy"
-              src="./about.webp"
-              alt=""
-              className="rounded-2xl"
-            />
+        data-aos="fade-up"
+        className="w-[120px] bg-blue-500 h-1.5 rounded-lg mt-4"
+      ></div>
+
+      {/* konten utama */}
+      <div className="flex flex-col md:flex-row items-center md:items-start justify-between mt-8">
+        {/* gambar */}
+        <div
+          data-aos="fade-up"
+          className="w-full md:w-1/2 h-[250px] md:h-[400px] overflow-hidden rounded-lg"
+        >
+          <img
+            src="./broken-phone.jpg"
+            alt="Broken phone"
+            className="object-cover w-full h-full"
+          />
+        </div>
+        <div
+          data-aos="fade-up"
+          className="text-slate-500 text-lg w-full md:w-1/2 md:pl-5 mt-6 md:mt-0 "
+        >
+          TechFix adalah layanan terpercaya untuk perbaikan HP, gadget,
+          komputer, serta pengembangan website. Dengan teknisi berpengalaman,
+          kami memberikan servis cepat, harga transparan, dan garansi demi
+          kepuasan Anda.
+          <div className="flex flex-col sm:flex-row justify-center md:justify-start mt-10 gap-4">
+            <div className="border-b-4 rounded border-b-blue-500 text-center w-[200px] h-[100px]">
+              <h1 className="text-blue-500 font-bold text-5xl">1+</h1>
+              <p>Tahun Pengalaman</p>
+            </div>
+            <div className="border-b-4 rounded border-b-blue-500 text-center w-[200px] h-[100px]">
+              <h1 className="text-blue-500 font-bold text-5xl">10+</h1>
+              <p>Pelanggan Puas</p>
+            </div>
           </div>
         </div>
       </div>

@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import {
   Accordion,
   AccordionBody,
@@ -7,6 +10,13 @@ import {
 import { FaChevronDown } from "react-icons/fa";
 
 const Faq = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: false,
+    });
+  }, []);
+
   const questions = [
     {
       title: "Bagaimana cara kerja TechFix?",
@@ -44,23 +54,31 @@ const Faq = () => {
       answer: "Tidak",
     },
   ];
+
   return (
-    <div className="mx-auto max-w-[1240px] flex  px-4 flex-col overflow-hidden">
-      <h1 className="text-5xl text-blue-500 font-bold text-center mt-24">
+    <div className="mx-auto max-w-[1240px] flex px-4 flex-col overflow-hidden">
+      <h1
+        className="text-5xl text-blue-500 font-bold text-center mt-24"
+        data-aos="fade-up"
+      >
         Frequently Asked Questions
       </h1>
-      <Accordion className="mt-10">
+
+      <Accordion className="mt-10 w-full">
         {questions.map((question, key) => (
-          <AccordionItem className="my-10" key={key}>
-            <AccordionHeader className="bg-slate-100 w-full flex items-center justify-between py-3 px-4 rounded-t-lg">
-              <h3 className={`accordion-title font-medium`}>
-                {question.title}
-              </h3>
-              <FaChevronDown />
+          <AccordionItem
+            className="my-5"
+            key={key}
+            data-aos="fade-up"
+            data-aos-delay={key * 100}
+          >
+            <AccordionHeader className="bg-slate-100 w-full flex items-center justify-between py-3 px-4 rounded-t-lg cursor-pointer transition hover:bg-slate-200">
+              <h3 className="accordion-title font-medium">{question.title}</h3>
+              <FaChevronDown className="transition-transform duration-300 group-aria-expanded:rotate-180" />
             </AccordionHeader>
 
-            <AccordionBody className="bg-slate-100 mb-5 rounded-b-lg">
-              <div className="accordion-body py-3 px-4 text-slate-600">
+            <AccordionBody className="overflow-hidden transition-all duration-500 ease-in-out bg-slate-100 mb-5 rounded-b-lg">
+              <div className="accordion-body py-3 px-4 text-slate-600 opacity-100">
                 {question.answer}
               </div>
             </AccordionBody>

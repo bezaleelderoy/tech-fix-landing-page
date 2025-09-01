@@ -4,19 +4,19 @@ import { useState, useEffect } from "react";
 const Navbar = () => {
   const links = [
     {
-      title: "Home",
+      title: "Beranda",
       route: "/#home",
     },
     {
-      title: "About Us",
+      title: "Tentang Kami",
       route: "/#about",
     },
     {
-      title: "Services",
+      title: "Layanan",
       route: "/#services",
     },
     {
-      title: "Contacts",
+      title: "Kontak",
       route: "/#contacts",
     },
   ];
@@ -46,7 +46,11 @@ const Navbar = () => {
         scrolled ? "bg-white shadow" : "bg-blue-500"
       } fixed top-0 left-0 w-full z-50 transition-all duration-300`}
     >
-      <div className="flex justify-between items-center mx-auto max-w-[1240px] px-4">
+      <div
+        className={`${
+          scrolled ? "px-4" : "px-8"
+        } flex justify-between items-center mx-auto max-w-[1240px] transition-all duration-300`}
+      >
         <img
           src={`${scrolled ? "./logo-blue.png" : "./logo.png"}`}
           alt="Logo"

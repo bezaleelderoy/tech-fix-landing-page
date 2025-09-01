@@ -1,10 +1,12 @@
 import Navbar from "../components/Layouts/Navbar";
 import Hero from "../components/Layouts/Hero";
-import About from "../components/Layouts/About";
+import Pros from "../components/Layouts/Pros";
 import Founder from "../components/Layouts/Founder";
 import Testimony from "../components/Layouts/Testimony";
 import Faq from "../components/Layouts/Faq";
 import Footer from "../components/Layouts/Footer";
+import About from "../components/Layouts/About";
+import Service from "../components/Layouts/Service";
 
 const HomePage = () => {
   return (
@@ -12,6 +14,8 @@ const HomePage = () => {
       <Navbar />
       <Hero />
       <About />
+      <Service />
+      <Pros />
       <Founder />
       <Testimony />
       <Faq />
