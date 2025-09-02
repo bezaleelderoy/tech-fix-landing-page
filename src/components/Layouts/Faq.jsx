@@ -19,39 +19,39 @@ const Faq = () => {
 
   const questions = [
     {
-      title: "Bagaimana cara kerja TechFix?",
+      title: "Apa itu TechFix?",
       answer:
-        "Hubungi Kita > Kita Dateng > Cek Barang > Kita Perbaiki > Kasih > Bayar",
+        "TechFix adalah layanan reparasi dan perawatan perangkat elektronik seperti smartphone, laptop, PC, dan gadget lainnya dengan teknisi berpengalaman.",
     },
     {
-      title: "Apakah ada alamat tetap?",
-      answer: "Tidak. TechFix ada dimana saja",
+      title: "Perangkat apa saja yang bisa diperbaiki di TechFix?",
+      answer: "Kami menerima perbaikan smartphone (Android & iPhone), laptop, komputer, tablet, hingga perangkat gaming.",
     },
     {
-      title: "Apakah data saya tidak akan hilang?",
+      title: "Berapa lama proses perbaikan biasanya?",
       answer:
-        "Tidak. Teknisi TechFix tau diri. Jika kita tidak mampu kita tidak akan ambil jobnya",
+        "Waktu perbaikan bervariasi tergantung jenis kerusakan. Perbaikan ringan biasanya selesai dalam 1–2 hari, sedangkan kerusakan berat bisa memakan waktu lebih lama.",
     },
     {
-      title: "TechFix sampai mana saja?",
-      answer: "Tergantung mood teknisi. paling jauh denpasar utara",
+      title: "Apakah TechFix memberikan garansi?",
+      answer: "Ya, setiap perbaikan di TechFix dilengkapi garansi hingga 30 hari sesuai jenis layanan.",
     },
     {
-      title: "Barang yang dipakai ORI tidak?",
-      answer: "Hmm gmn ya",
+      title: "Apakah saya harus datang langsung ke lokasi?",
+      answer: "Tidak selalu. TechFix menyediakan layanan antar-jemput perangkat (pickup & delivery) di area tertentu.",
     },
     {
-      title: "Ada garansi gak?",
+      title: "Bagaimana cara mengetahui estimasi biaya perbaikan?",
       answer:
-        "Ada. tenang aja kita bakal jual rugi klo misalnya anda tidak puas",
+        "Anda bisa konsultasi gratis via chat/telepon. Setelah pengecekan, kami akan memberikan estimasi biaya sebelum perbaikan dilakukan.",
     },
     {
-      title: "Kok sosmed techfix jarang aktif ya?",
-      answer: "cc @henrigaming09",
+      title: "Apakah data pribadi di perangkat saya aman?",
+      answer: "Ya, keamanan data pelanggan adalah prioritas kami. Kami tidak akan mengakses atau membagikan data pribadi tanpa izin.",
     },
     {
-      title: "Apakah TechFix buka loker magang?",
-      answer: "Tidak",
+      title: "Bagaimana cara menghubungi TechFix?",
+      answer: "Anda bisa menghubungi kami melalui WhatsApp, Instagram, Facebook, atau Email.",
     },
   ];
 
